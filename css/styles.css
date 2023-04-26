@@ -147,6 +147,8 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .logo-part {
   color: var(--dark);
@@ -161,11 +163,19 @@ body {
 }
 
 /* Navigation */
+.site-nav {
+  display: none;
+}
+.header-nav-address {
+  display: none;
+}
+
 .header-nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-
+/* 
 .site-nav {
   display: flex;
   margin-left: 76px;
@@ -202,9 +212,9 @@ body {
   position: relative;
   display: block;
   color: var(--primary-brand);
-}
+} */
 
-.active::after {
+/* .active::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -214,9 +224,9 @@ body {
   height: 4px;
   border-radius: 2px;
   background-color: var(--primary-brand);
-}
+} */
 
-.address {
+/* .address {
   font-style: normal;
   margin-left: auto;
 }
@@ -251,7 +261,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-style: normal;
-}
+} */
 
 /* Hero */
 .hero {
@@ -273,14 +283,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
-  margin-bottom: 48;
+  margin-bottom: 72;
   text-align: center;
-  width: 496px;
+  width: 320px;
 
   color: var(--white-background);
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
 }
 
@@ -1103,7 +1113,213 @@ body {
 
 /* Media for Navigation */
 
+@media screen and (min-width: 1157px) {
+  .address-nav {
+    display: block;
+    margin-left: auto;
+  }
+
+  .address-nav .item + .item {
+    margin-left: 40px;
+  }
+
+  .address-nav .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    color: var(--text);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-style: normal;
+    transition: color var(--time-transition-duration) var(--transition-timing-function);
+  }
+  .address-nav .link:hover,
+  .address-nav .link:focus,
+  .address-nav .link:active {
+    color: var(--pressed-state);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-style: normal;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1157px) {
+  .header-nav-address {
+    display: block;
+  }
+
+  .address {
+    font-style: normal;
+    margin-left: auto;
+  }
+
+  .address-nav .item + .item {
+    margin-left: 40px;
+  }
+
+  .address-nav .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    color: var(--text);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-style: normal;
+    transition: color var(--time-transition-duration) var(--transition-timing-function);
+  }
+  .address-nav .link:hover,
+  .address-nav .link:focus,
+  .address-nav .link:active {
+    color: var(--pressed-state);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-style: normal;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-nav {
+    display: flex;
+    margin-left: 76px;
+  }
+
+  .site-nav .item + .item {
+    margin-left: 40px;
+  }
+
+  .site-nav .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    transition: color var(--time-transition-duration) var(--transition-timing-function);
+  }
+
+  .site-nav .link:hover,
+  .site-nav .link:focus,
+  .site-nav .link:active {
+    color: var(--pressed-state);
+  }
+
+  .site-nav .link.current {
+    color: var(--primary-brand);
+  }
+  .site-nav .link.active {
+    position: relative;
+    display: block;
+    color: var(--primary-brand);
+  }
+
+  .active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--primary-brand);
+  }
+
+  .address {
+    font-style: normal;
+    margin-left: auto;
+  }
+  .address-nav {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .address-nav .item + .item {
+    margin-left: 40px;
+  }
+
+  .address-nav .link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    color: var(--text);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-style: normal;
+    transition: color var(--time-transition-duration) var(--transition-timing-function);
+  }
+  .address-nav .link:hover,
+  .address-nav .link:focus,
+  .address-nav .link:active {
+    color: var(--pressed-state);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-style: normal;
+  }
+}
+
 /* Media for Hero */
+@media screen and (min-width: 767px) and (max-width: 1157px) {
+  .hero-title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 36;
+    text-align: center;
+    width: 496px;
+
+    color: var(--white-background);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+  }
+  /* .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/slider-bg-tablet-1x.jpg);
+  } */
+}
+@media screen and (min-width: 1157px) {
+  .hero-title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 48;
+    text-align: center;
+    width: 496px;
+
+    color: var(--white-background);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+  }
+  /* .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/slider-bg-tablet-1x.jpg);
+  } */
+}
+
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1157px),
   screen and (min-resolution: 192dpi) and (min-width: 1157px),
   screen and (min-resolution: 2dppx) and (min-width: 1157px) {
@@ -1127,12 +1343,7 @@ body {
       url(../images/slider-bg-tablet-2x.jpg);
   }
 }
-@media screen and (min-width: 767px) {
-  .hero {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/slider-bg-tablet-1x.jpg);
-  }
-}
+
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
   screen and (min-resolution: 192dpi) and (min-width: 320px),
   screen and (min-resolution: 2dppx) and (min-width: 320px) {
