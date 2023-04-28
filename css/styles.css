@@ -47,11 +47,13 @@ ol {
 }
 
 .container-header {
-  /* width: 100%; */
-  padding-left: 16px;
-  padding-right: 16px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -379,7 +381,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--text);
   max-width: 396px;
-  text-align: center;
+  /* text-align: center; */
   margin: 0 auto;
 }
 
@@ -484,7 +486,7 @@ body {
 }
 .customers-icon-item {
   max-width: 190px;
-  width: calc((100% - 16px) / 2);
+  /* width: calc((100% - 16px) / 2); */
 }
 
 .customers {
@@ -1345,7 +1347,7 @@ body {
     margin-top: 0px;
     margin-bottom: 40;
     text-align: center;
-    width: 436px;
+    max-width: 436px;
 
     color: var(--white-background);
     font-weight: 700;
@@ -1463,7 +1465,7 @@ body {
 
 @media screen and (min-width: 767px) and (max-width: 1157px) {
   .about .about-icon-item {
-    width: 351px;
+    width: 356px;
   }
   .about-title {
     text-align: left;
@@ -1474,6 +1476,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .about-icon-item:not(:last-child) {
+    margin-bottom: 0px;
+  }
   .about {
     display: flex;
     gap: 24px;
@@ -1542,15 +1547,21 @@ about-text
     width: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 428px) {
   .container {
-    max-width: 768px;
+    width: 428px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
   }
 }
 
-@media screen and (max-width: 1157px) {
+@media screen and (min-width: 1158px) {
   .container {
-    padding: 0 16px;
+    width: 1158px;
+    /* padding: 0 16px; */
   }
 }
 
@@ -1593,7 +1604,19 @@ about-text
     gap: 24px;
   }
 }
+@media screen and (min-width: 428px) {
+  .customers-icon-item {
+    max-width: 190px;
+    width: calc((100% - 16px) / 2);
+  }
 
+  .customers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 72px 16px;
+  }
+}
 @media screen and (min-width: 767px) {
   .customers {
     display: flex;
@@ -1667,10 +1690,6 @@ about-text
   }
 }
 @media screen and (min-width: 767px) {
-  /* .footer-wrapp {
-    padding-left: 108px;
-    padding-right: 108px;
-  } */
   .footer-social-box {
     text-align: left;
   }
@@ -1710,9 +1729,10 @@ about-text
 @media screen and (min-width: 767px) and (max-width: 1157px) {
   .footer-wrapp {
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     flex-wrap: wrap;
     gap: 72px 24px;
+    max-width: 550px;
   }
   .subscribe-text {
     text-align: left;
